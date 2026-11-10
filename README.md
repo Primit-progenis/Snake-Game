@@ -1,16 +1,22 @@
-# Snake-Game
-The classic snake game. Made with pygame.
+# Snake Game
 
-You can check out my video tutorial series on how to create this game: https://www.youtube.com/watch?v=5tvER0MT14s&t=2s
+A small Snake game written in Python with Pygame. The game draws a 20-by-20 grid in a 500-by-500 window.
 
-# Requirements
-- Python 3.x
-- pygame
+## How it works
 
-# Run in Gitpod
+- The snake is a sequence of grid cubes. The arrow keys change its direction, and each body segment follows the turn made by the segment ahead of it.
+- A green snack appears at a random unoccupied grid position. Eating it adds a segment and places another snack.
+- The game prints the current body length as the score when the snake hits a wall or itself, then resets the snake.
 
-You can also run Snake-Game in Gitpod, a free online dev environment for GitHub:
+The game loop updates movement, checks collisions and snack pickup, and redraws the grid, snake, and snack.
 
-If you're intersted in a paid subscription with GitPod use the coupon code: **TECHWITHTIM19**
+## Requirements and run
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/techwithtim/Snake-Game/blob/master/snake.py)
+Requires Python 3 and Pygame. Install Pygame if needed, then run:
+
+```sh
+python -m pip install pygame
+python snake.py
+```
+
+Use the **arrow keys** to steer. Close the game window to exit.
